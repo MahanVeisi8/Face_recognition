@@ -50,32 +50,25 @@ This step involves loading the images from structured directories named after ea
 
 To ensure that images are correctly loaded and to understand the dataset's composition, a sample of images is displayed. This helps verify the integrity of the image loading and resizing process.
 
-![Data Loading and Resizing](asset/first_data.png)
-
-
-**Image Placeholder:**
-- ![Sample Images Grid](path/to/sample_images_grid.jpg)
+![Data Loading and Resizing](asset/first_data.jpg)
 
 ## Data Augmentation
 
 To enhance model robustness and prevent overfitting, the training images are augmented using a variety of transformations, such as rotations, shifts, shearing, flipping, and brightness adjustments. These transformations simulate different lighting conditions, orientations, and partial occlusions the model might encounter in practical scenarios.
 
-```python
-# Setup ImageDataGenerator for augmentation
-datagen = ImageDataGenerator(rotation_range=90, width_shift_range=0.1, ...)
-```
-
-**Image Placeholder:**
-- ![Data Augmentation](path/to/data_augmentation.png)
+![Data Augmentation](asset/augmentation.png)
 
 ## Splitting the Data
 
 The images are split into training, validation, and test sets. This is essential for training the model effectively and evaluating its performance on unseen data. Stratified sampling is used to maintain the distribution of classes across these sets.
 
-```python
-# Splitting the data into training, validation, and test sets
-X_train, X_val, X_test, y_train, y_val, y_test = train_test_split(...)
-```
+<table>
+  <tr>
+    <td>Train Distribution<br><img src="asset/data_dirst1.png" alt="Epoch 10 Performance" width="240px"></td>
+    <td>>Validation Distribution<br><img src="asset/data_dirst2.png" alt="Epoch 500 Performance" width="240px"></td>
+    <td>Test Distribution<br><img src="asset/data_dirst3.png" alt="Epoch 1000 Performance" width="240px"></td>
+  </tr>
+</table>
 
 **Image Placeholder:**
 - ![Data Split and Distribution](path/to/data_split_distribution.png)
