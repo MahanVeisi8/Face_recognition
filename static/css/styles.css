@@ -1,18 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f8f8;
+    background-color: #f4f4f9;
+    margin: 0; /* Reset default margin */
 }
+
 .container {
     text-align: center;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width to control layout */
 }
-form {
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+input[type='file'] {
     margin-bottom: 20px;
+}
+
+input[type='file']:hover, input[type='file']:focus {
+    border-color: #007bff;
+}
+
+#preview {
+    max-height: 300px; /* Limit the height of the image */
+    max-width: 100%; /* Ensure it scales within the container */
+    margin-top: 20px;
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+.prediction {
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 20px; /* Space between image and text */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

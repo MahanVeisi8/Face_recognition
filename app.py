@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 
 # Initialize Flask app
 app = Flask(__name__)
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load pre-trained model
@@ -54,7 +54,6 @@ def upload():
         return redirect(request.url)
 
     file = request.files['file']
-
     if file.filename == '':
         return redirect(request.url)
 
@@ -64,7 +63,9 @@ def upload():
         img_array = preprocess_image(filename)
         predictions = model.predict(img_array)
         predicted_class = class_labels[np.argmax(predictions)]
-        return render_template('index.html', prediction=predicted_class)
-
+         # Provide a URL path for the image
+        image_url = url_for('static', filename='uploads/' + file.filename)
+        
+        return render_template('index.html', prediction=predicted_class, image_url=image_url)
 if __name__ == '__main__':
     app.run(debug=True)

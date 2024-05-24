@@ -5,17 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Classification</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Image Classification</h1>
         <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" required>
+            <input type="file" name="file" id="imgInput" required>
             <button type="submit">Upload</button>
         </form>
-        {% if prediction %}
-            <h2>Prediction: {{ prediction }}</h2>
+        <!-- Conditionally render image and prediction -->
+        {% if image_url %}
+            <img id="preview" src="{{ image_url }}" alt="Uploaded Image" style="max-width: 100%; margin-top: 20px;">
+            <h2 class="prediction">Prediction: {{ prediction }}</h2>
+        {% else %}
+            <img id="preview" src="#" alt="Image Preview" style="max-width: 100%; display: none; margin-top: 20px;">
         {% endif %}
     </div>
+    <script>
+    document.getElementById('imgInput').onchange = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var preview = document.getElementById('preview');
+            preview.src = reader.result;
+            preview.style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+    </script>
 </body>
 </html>
