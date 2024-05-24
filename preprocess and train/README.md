@@ -36,9 +36,82 @@ The notebook includes detailed steps for data handling, preprocessing, model tra
 The code is designed to run in a Python environment with essential machine learning and simulation libraries. You can execute the notebook directly in Google Colab using the badge link provided, which includes a pre-configured environment with all necessary dependencies.
 
 
-## Data Preprocessing
 
-The preprocessing steps include resizing images, converting images to the appropriate color scale, and normalizing the pixel values. The notebook uses multi-threading to efficiently load and process large sets of image data from disk.
+# Data Preprocessing
+
+Data preprocessing is a crucial first step in any machine learning workflow, ensuring that the data fed into the model is clean, appropriately formatted, and enhanced to improve model performance. This project involves several preprocessing steps, from initial data loading and visualization to more complex manipulations like augmentation and normalization.
+
+## Environment Setup and Library Importation
+
+The preprocessing begins with setting up the environment, which involves mounting Google Drive (if using Colab), navigating to the project directory, and importing necessary libraries. These libraries include:
+
+- **OpenCV**: For image manipulation.
+- **NumPy**: For numerical operations.
+- **Matplotlib**: For plotting graphs and images.
+- **TensorFlow**: For model building and preprocessing functionalities.
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+cd /path/to/project/directory
+import cv2, numpy as np, matplotlib.pyplot as plt, tensorflow as tf
+```
+
+**Image Placeholder:**
+- ![Environment Setup](path/to/environment_setup_image.png)
+
+## Data Loading and Image Resizing
+
+This step involves loading the images from structured directories named after each celebrity, resizing them to uniform dimensions (224x224 pixels), and labeling them based on their directory names to facilitate their use in training a convolutional neural network.
+
+```python
+# Function to load and resize images
+def load_and_resize_image(image_path, target_width, target_height, celebrity_to_label):
+    # Function contents
+```
+
+**Image Placeholder:**
+- ![Data Loading and Resizing](path/to/data_loading_resizing.png)
+
+## Visualizing the Data
+
+To ensure that images are correctly loaded and to understand the dataset's composition, a sample of images is displayed. This helps verify the integrity of the image loading and resizing process.
+
+```python
+# Display a grid of sample images
+fig, axes = plt.subplots(7, 6, figsize=(18, 21))
+# Display code
+```
+
+**Image Placeholder:**
+- ![Sample Images Grid](path/to/sample_images_grid.png)
+
+## Data Augmentation
+
+To enhance model robustness and prevent overfitting, the training images are augmented using a variety of transformations, such as rotations, shifts, shearing, flipping, and brightness adjustments. These transformations simulate different lighting conditions, orientations, and partial occlusions the model might encounter in practical scenarios.
+
+```python
+# Setup ImageDataGenerator for augmentation
+datagen = ImageDataGenerator(rotation_range=90, width_shift_range=0.1, ...)
+```
+
+**Image Placeholder:**
+- ![Data Augmentation](path/to/data_augmentation.png)
+
+## Splitting the Data
+
+The images are split into training, validation, and test sets. This is essential for training the model effectively and evaluating its performance on unseen data. Stratified sampling is used to maintain the distribution of classes across these sets.
+
+```python
+# Splitting the data into training, validation, and test sets
+X_train, X_val, X_test, y_train, y_val, y_test = train_test_split(...)
+```
+
+**Image Placeholder:**
+- ![Data Split and Distribution](path/to/data_split_distribution.png)
+
+
+
 
 ## Model Training
 
