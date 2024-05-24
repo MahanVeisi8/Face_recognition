@@ -82,7 +82,7 @@ Initially, a lightweight model based on MobileNetV2, known for its efficiency on
 ### Advanced Ensemble Model
 Given the limitations observed with the preliminary model, a robust ensemble approach was adopted. This method leverages the strengths of three distinct CNN architectures: ResNet50, InceptionV3, and MobileNetV2. By freezing the initial layers and fine-tuning the deeper ones, the ensemble model captures diverse facial features more effectively.
 
-**Training Dynamics**:
+### **Training Dynamics**:
 - **Model Configuration**: Layers from each base model are frozen to preserve learned features, with only the last layers fine-tuned.
 - **Compilation**: The ensemble model uses an Adam optimizer with a learning rate of 0.0001 and categorical crossentropy loss, suitable for multi-class problems.
 - **Training Process**: Incorporates early stopping and model checkpointing to enhance performance and prevent overfitting, training over several epochs with batch size set to 32.
@@ -90,16 +90,17 @@ Given the limitations observed with the preliminary model, a robust ensemble app
 
 ![model](asset/model_plot.png)
 
-**Evaluation**:
+### **Evaluation**:
 - **Performance Metrics**: The model's training journey is depicted through accuracy and loss plots, illustrating the learning curve and the balance between learning and overfitting.
 - **Accuracy Achievements**: Although halted prematurely due to GPU constraints, the model showed promising results with validation accuracy peaking significantly higher than the initial simple model.
   
-**Results Visualization**:
+### **Results Visualization**:
 The below graphs provide insights into the training and validation phases, underlining the challenges and achievements of the ensemble model:
 
 ![Training and Validation report](asset/acc.png)
 
-These visuals reflect the model's robustness and its capability to generalize, despite the limited training epochs due to resource constraints. The ensemble model's advanced architecture and strategic training regimen culminated in superior performance on unseen data, achieving notable accuracies in both validation and test sets. 
+### **Final Model Accuracies**: 
+The ensemble model demonstrated exceptional performance with an accuracy of **100.00%** on the training set, highlighting perfect learning on the training data. Validation accuracy reached **96.47%**, indicating strong generalization to new data. Finally, the model achieved **90.70%** accuracy on the test set, confirming its robustness and effectiveness in handling unseen data. Despite these impressive results, there's potential for further improvement with enhanced computational resources such as increased GPU and RAM, which would allow for more extensive data handling and more complex model training.
 
 ## Testing on Real-World Data
 The ensemble model's real-world efficacy was further confirmed through tests on new images, not part of the training or validation datasets. This step was crucial to ascertain the model's practical applicability, ensuring it performs well under varied and uncontrolled conditions typical of real-world usage.
