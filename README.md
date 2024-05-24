@@ -41,8 +41,6 @@ The system can recognize the following celebrities:
     <td><img src="asset/celeb_sample_img/Ali_Daei/1.jpg" alt="Ali Daei" width="100"><br>0: Ali Daei</td>
     <td><img src="asset/celeb_sample_img/Alireza_Beiranvand/1.jpg" alt="Alireza Beiranvand" width="100"><br>1: Alireza Beiranvand</td>
     <td><img src="asset/celeb_sample_img/Bahram_Radan/1.jpg" alt="Bahram Radan" width="100"><br>2: Bahram Radan</td>
-  </tr>
-  <tr>
     <td><img src="asset/celeb_sample_img/Ebi/1.jpg" alt="Ebi" width="100"><br>3: Ebi</td>
     <td><img src="asset/celeb_sample_img/Golshifteh_Farahani/1.jpg" alt="Golshifteh Farahani" width="100"><br>4: Golshifteh Farahani</td>
     <td><img src="asset/celeb_sample_img/Hayedeh/1.jpg" alt="Hayedeh" width="100"><br>5: Hayedeh</td>
@@ -51,8 +49,6 @@ The system can recognize the following celebrities:
     <td><img src="asset/celeb_sample_img/Homayoon_Shajarian/1.jpg" alt="Homayoon Shajarian" width="100"><br>6: Homayoon Shajarian</td>
     <td><img src="asset/celeb_sample_img/Javad_Razavian/1.jpg" alt="Javad Razavian" width="100"><br>7: Javad Razavian</td>
     <td><img src="asset/celeb_sample_img/Mehran_Ghafourian/1.jpg" alt="Mehran Ghafourian" width="100"><br>8: Mehran Ghafourian</td>
-  </tr>
-  <tr>
     <td><img src="asset/celeb_sample_img/Mehran_Modiri/1.jpg" alt="Mehran Modiri" width="100"><br>9: Mehran Modiri</td>
     <td><img src="asset/celeb_sample_img/Mohamad_Esfehani/1.jpg" alt="Mohamad Esfehani" width="100"><br>10: Mohamad Esfehani</td>
     <td><img src="asset/celeb_sample_img/Reza_Attaran/1.jpg" alt="Reza Attaran" width="100"><br>11: Reza Attaran</td>
@@ -61,8 +57,6 @@ The system can recognize the following celebrities:
     <td><img src="asset/celeb_sample_img/Sahar_Dolatshahi/1.jpg" alt="Sahar Dolatshahi" width="100"><br>12: Sahar Dolatshahi</td>
     <td><img src="asset/celeb_sample_img/Seyed_Jalal_hosseini/1.jpg" alt="Seyed Jalal Hosseini" width="100"><br>13: Seyed Jalal Hosseini</td>
     <td><img src="asset/celeb_sample_img/Taraneh_Alidoosti/1.jpg" alt="Taraneh Alidoosti" width="100"><br>14: Taraneh Alidoosti</td>
-  </tr>
-  <tr>
     <td><img src="asset/celeb_sample_img/Googoosh/1.jpg" alt="Googoosh" width="100"><br>15: Googoosh</td>
     <td><img src="asset/celeb_sample_img/Mohsen_Chavoshi/1.jpg" alt="Mohsen Chavoshi" width="100"><br>16: Mohsen Chavoshi</td>
     <td><img src="asset/celeb_sample_img/Mahan_Veisi/1.jpg" alt="Mahan Veisi" width="100"><br>17: Mahan Veisi</td>
