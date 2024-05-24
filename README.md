@@ -64,11 +64,19 @@ The system can recognize the following celebrities:
   </table>
 Each class has been accurately predicted by the ensemble model, with an overview of each class provided in the application.
 
-## Application Performance
+## Application Architecture
 
-After launching the application, you can upload images for classification. Here’s a demonstration of the application's performance:
+This application utilizes Flask, a lightweight and versatile web framework in Python, to serve as the backend. Flask handles routing and server-side logic, including image uploads and model inference. The front end is built using HTML and CSS, providing a user-friendly interface for interacting with the application. Once set up, the application can be accessed locally through a web browser, allowing users to upload images and view the classification results in real-time.
 
-![App Performance](static/path_to_application_gif.gif)
+### Backend
+
+The Flask backend is configured to handle image uploads, where uploaded images are processed and classified using the pre-trained TensorFlow model. The predictions are then sent back to the frontend.
+
+### Frontend
+
+The frontend is designed with simplicity in mind, using basic HTML for structure and CSS for styling. It offers an intuitive layout where users can upload images to be classified, and view both the images and their predicted classes.
+
+By running the application on your local machine, you can interact with the model directly through the web interface hosted at `http://localhost:5000`.
 
 ## Conclusion
 
