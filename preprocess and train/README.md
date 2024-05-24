@@ -8,25 +8,6 @@
 
 This repository hosts a Jupyter Notebook that documents the end-to-end process of building a celebrity face recognition model. The project utilizes TensorFlow and Keras for building an ensemble of convolutional neural networks (CNNs) to classify images into distinct **iranian** celebrity categories based on their facial features.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Setup Instructions](#setup-instructions)
-- [Notebook Details](#notebook-details)
-  - [Data Preprocessing](#data-preprocessing)
-  - [Model Training](#model-training)
-  - [Evaluation and Analysis](#evaluation-and-analysis)
-- [Results](#results)
-- [Contributing](#contributing)
-
-## Project Overview
-
-The notebook includes detailed steps for data handling, preprocessing, model training, and evaluation. It covers the following key aspects:
-- Setting up the environment and importing necessary libraries.
-- Loading and preprocessing image data.
-- Splitting data into training, validation, and test sets.
-- Data augmentation to enhance model robustness.
-- Building and training an ensemble model using architectures like MobileNetV2 and InceptionV3.
-- Evaluating model performance and analyzing misclassifications.
 
 ## Setup
 
@@ -36,41 +17,43 @@ The notebook includes detailed steps for data handling, preprocessing, model tra
 The code is designed to run in a Python environment with essential machine learning and simulation libraries. You can execute the notebook directly in Google Colab using the badge link provided, which includes a pre-configured environment with all necessary dependencies.
 
 
-## Data Loading and Image Resizing
+## Preprocessing
+
+### Data Loading and Image Resizing
 
 Images stored in directories named after each celebrity are loaded and resized to a uniform dimension of 224x224 pixels—ideal for CNN input. Each image is labeled based on its parent directory, aligning with the respective celebrity's name. This automated labeling facilitates straightforward training and validation:
 
-```python
-# Function load_and_resize_image() is used here
-```
-
-**Image Placeholder:**
-- ![Data Loading and Resizing](asset/first_data.jpg)
-
-## Visualizing the Data
+### Visualizing the Data
 
 To verify that images are correctly loaded and to understand the dataset's composition, we display a sample of the images. This visualization step checks the integrity of the image loading and resizing process and offers a quick glimpse into the data's variety and quality:
 
-**Image Placeholder:**
-- ![Sample Images Visualization](asset/first_data.jpg)
+![Sample Images Visualization](asset/first_data.jpg)
 
-## Data Augmentation
+### Data Augmentation
 
 To enhance model robustness and mitigate overfitting, training images undergo augmentation. Transformations such as rotations, shifts, shearing, flipping, and brightness adjustments are applied. These augmentations help the model generalize better by simulating various real-world conditions:
 
 ```python
-# Using ImageDataGenerator for applying transformations
+ImageDataGenerator(
+    rotation_range=90,
+    width_shift_range=0.1,
+    height_shift_range=0.1,
+    shear_range=0.30,
+    horizontal_flip=True,
+    fill_mode='nearest',
+    brightness_range=[0.8, 1.2]
+)
 ```
 
-**Image Placeholder:**
-- ![Data Augmentation](asset/augmentation.jpg)
+![Data Augmentation](asset/augmentation.jpg)
 
-## Splitting the Data
+### Splitting the Data
 
 To ensure effective training and unbiased evaluation, the dataset is divided into training, validation, and test sets using stratified sampling. This method helps maintain an equal distribution of classes across each set, crucial for training unbiased and generalized models:
 
 ```python
-# Code snippet for train_test_split showing stratified sampling
+X_train, X_temp, y_train, y_temp = train_test_split(images, labels, test_size=0.15, random_state=10, stratify=labels)
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=10, stratify=y_temp)
 ```
 
 The distribution of classes in each dataset part is visualized to confirm uniformity and appropriate representation:
@@ -83,8 +66,6 @@ The distribution of classes in each dataset part is visualized to confirm unifor
   </tr>
 </table>
 
-**Image Placeholder:**
-- ![Data Split and Distribution](asset/data_split_distribution.png)
 
 
 ## Model Training
