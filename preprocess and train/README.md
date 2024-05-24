@@ -68,6 +68,10 @@ The distribution of classes in each dataset part is visualized to confirm unifor
 
 
 
+### Data Normalization and Preparation
+
+After partitioning the data, each image's pixel values are normalized to a range of 0 to 1 to facilitate efficient training. This normalization process aids in achieving faster convergence during model training. Furthermore, image labels are converted into one-hot encoded vectors to suit the model's categorical classification needs. These steps ensure the data is in the optimal format for feeding into our neural network, setting a strong foundation for robust model performance.
+
 ## Model Training
 
 The project utilizes a combination of different CNN architectures, leveraging pretrained models like MobileNetV2 for feature extraction and custom layers for classification. The training process is detailed with strategies for handling overfitting, such as early stopping and dropout layers.
