@@ -46,20 +46,15 @@ Data preprocessing is a crucial first step in any machine learning workflow, ens
 
 This step involves loading the images from structured directories named after each celebrity, resizing them to uniform dimensions (224x224 pixels), and labeling them based on their directory names to facilitate their use in training a convolutional neural network.
 
-- ![Data Loading and Resizing](asset/first_data.png)
-
 ## Visualizing the Data
 
 To ensure that images are correctly loaded and to understand the dataset's composition, a sample of images is displayed. This helps verify the integrity of the image loading and resizing process.
 
-```python
-# Display a grid of sample images
-fig, axes = plt.subplots(7, 6, figsize=(18, 21))
-# Display code
-```
+![Data Loading and Resizing](asset/first_data.png)
+
 
 **Image Placeholder:**
-- ![Sample Images Grid](path/to/sample_images_grid.png)
+- ![Sample Images Grid](path/to/sample_images_grid.jpg)
 
 ## Data Augmentation
 
