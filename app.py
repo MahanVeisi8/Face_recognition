@@ -15,24 +15,24 @@ model = load_model(model_path)
 
 # Define class labels
 class_labels = {
-    0: 'Ali_Daei',
-    1: 'Alireza_Beiranvand',
-    2: 'Bahram_Radan',
+    0: 'Ali Daei',
+    1: 'Alireza Beiranvand',
+    2: 'Bahram Radan',
     3: 'Ebi',
-    4: 'Golshifteh_Farahani',
+    4: 'Golshifteh Farahani',
     5: 'Hayedeh',
-    6: 'Homayoon_Shajarian',
-    7: 'Javad_Razavian',
-    8: 'Mehran_Ghafoorian',
-    9: 'Mehran_Modiri',
-    10: 'Mohamad_Esfehani',
-    11: 'Reza_Attaran',
-    12: 'Sahar_Dolatshahi',
-    13: 'Seyed_Jalal_Hosseini',
-    14: 'Taraneh_Alidoosti',
+    6: 'Homayoon Shajarian',
+    7: 'Javad Razavian',
+    8: 'Mehran Ghafourian',
+    9: 'Mehran Modiri',
+    10: 'Mohamad Esfehani',
+    11: 'Reza Attaran',
+    12: 'Sahar Dolatshahi',
+    13: 'Seyed Jalal Hosseini',
+    14: 'Taraneh Alidoosti',
     15: 'Googoosh',
-    16: 'Mohsen_Chavoshi',
-    17: 'Mahan_Veisi'
+    16: 'Mohsen Chavoshi',
+    17: 'Mahan Veisi'
 }
 
 def preprocess_image(img_path, target_size=(224, 224)):
@@ -63,9 +63,23 @@ def upload():
         img_array = preprocess_image(filename)
         predictions = model.predict(img_array)
         predicted_class = class_labels[np.argmax(predictions)]
-         # Provide a URL path for the image
         image_url = url_for('static', filename='uploads/' + file.filename)
         
-        return render_template('index.html', prediction=predicted_class, image_url=image_url)
+        # Set up links based on the prediction
+        links = {}
+        if predicted_class == "Mahan Veisi":
+            message = "Hello boss .."
+            links = {
+                "GitHub": "https://github.com/MahanVeisi8",
+                "LinkedIn": "https://www.linkedin.com/in/mahan-veisi-427934226",
+                "Email": "mailto: mahan8292@gmail.com"
+            }
+        else:
+            message = None
+            links["Wikipedia"] = f"https://en.wikipedia.org/wiki/{predicted_class.replace('_', ' ')}"
+
+        return render_template('index.html', prediction=predicted_class, image_url=image_url, message=message, links=links)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
