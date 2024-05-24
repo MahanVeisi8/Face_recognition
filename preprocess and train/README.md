@@ -87,6 +87,9 @@ Given the limitations observed with the preliminary model, a robust ensemble app
 - **Compilation**: The ensemble model uses an Adam optimizer with a learning rate of 0.0001 and categorical crossentropy loss, suitable for multi-class problems.
 - **Training Process**: Incorporates early stopping and model checkpointing to enhance performance and prevent overfitting, training over several epochs with batch size set to 32.
 
+
+![model](asset/model_plot.png)
+
 **Evaluation**:
 - **Performance Metrics**: The model's training journey is depicted through accuracy and loss plots, illustrating the learning curve and the balance between learning and overfitting.
 - **Accuracy Achievements**: Although halted prematurely due to GPU constraints, the model showed promising results with validation accuracy peaking significantly higher than the initial simple model.
@@ -94,8 +97,7 @@ Given the limitations observed with the preliminary model, a robust ensemble app
 **Results Visualization**:
 The below graphs provide insights into the training and validation phases, underlining the challenges and achievements of the ensemble model:
 
-![Training and Validation Accuracy](asset/training_validation_accuracy.png)
-![Training and Validation Loss](asset/training_validation_loss.png)
+![Training and Validation report](asset/acc.png)
 
 These visuals reflect the model's robustness and its capability to generalize, despite the limited training epochs due to resource constraints. The ensemble model's advanced architecture and strategic training regimen culminated in superior performance on unseen data, achieving notable accuracies in both validation and test sets. 
 
