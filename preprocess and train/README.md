@@ -41,37 +41,12 @@ The code is designed to run in a Python environment with essential machine learn
 
 Data preprocessing is a crucial first step in any machine learning workflow, ensuring that the data fed into the model is clean, appropriately formatted, and enhanced to improve model performance. This project involves several preprocessing steps, from initial data loading and visualization to more complex manipulations like augmentation and normalization.
 
-## Environment Setup and Library Importation
-
-The preprocessing begins with setting up the environment, which involves mounting Google Drive (if using Colab), navigating to the project directory, and importing necessary libraries. These libraries include:
-
-- **OpenCV**: For image manipulation.
-- **NumPy**: For numerical operations.
-- **Matplotlib**: For plotting graphs and images.
-- **TensorFlow**: For model building and preprocessing functionalities.
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-cd /path/to/project/directory
-import cv2, numpy as np, matplotlib.pyplot as plt, tensorflow as tf
-```
-
-**Image Placeholder:**
-- ![Environment Setup](path/to/environment_setup_image.png)
 
 ## Data Loading and Image Resizing
 
 This step involves loading the images from structured directories named after each celebrity, resizing them to uniform dimensions (224x224 pixels), and labeling them based on their directory names to facilitate their use in training a convolutional neural network.
 
-```python
-# Function to load and resize images
-def load_and_resize_image(image_path, target_width, target_height, celebrity_to_label):
-    # Function contents
-```
-
-**Image Placeholder:**
-- ![Data Loading and Resizing](path/to/data_loading_resizing.png)
+- ![Data Loading and Resizing](asset/first_data.png)
 
 ## Visualizing the Data
 
