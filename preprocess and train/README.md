@@ -56,7 +56,7 @@ To ensure that images are correctly loaded and to understand the dataset's compo
 
 To enhance model robustness and prevent overfitting, the training images are augmented using a variety of transformations, such as rotations, shifts, shearing, flipping, and brightness adjustments. These transformations simulate different lighting conditions, orientations, and partial occlusions the model might encounter in practical scenarios.
 
-![Data Augmentation](asset/augmentation.png)
+![Data Augmentation](asset/augmentation.jpg)
 
 ## Splitting the Data
 
@@ -64,9 +64,9 @@ The images are split into training, validation, and test sets. This is essential
 
 <table>
   <tr>
-    <td>Train Distribution<br><img src="asset/data_dirst1.png" alt="Epoch 10 Performance" width="240px"></td>
-    <td>>Validation Distribution<br><img src="asset/data_dirst2.png" alt="Epoch 500 Performance" width="240px"></td>
-    <td>Test Distribution<br><img src="asset/data_dirst3.png" alt="Epoch 1000 Performance" width="240px"></td>
+    <td>Train Distribution<br><img src="asset/data_dist1.png" alt="Epoch 10 Performance" width="240px"></td>
+    <td>>Validation Distribution<br><img src="asset/data_dist2.png" alt="Epoch 500 Performance" width="240px"></td>
+    <td>Test Distribution<br><img src="asset/data_dist3.png" alt="Epoch 1000 Performance" width="240px"></td>
   </tr>
 </table>
 
