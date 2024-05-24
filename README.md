@@ -29,7 +29,7 @@ This repository contains the source code for a celebrity face recognition system
 
 ## Model Training and Evaluation
 
-For details on data preprocessing, model training, and evaluation, refer to the [`preprocess and train`](preprocess_and_train/README.md) directory. This section provides comprehensive instructions on preparing the dataset, training the ensemble model, and evaluating its performance with detailed accuracy metrics.
+For details on data preprocessing, model training, and evaluation, refer to the [`preprocess and train`](preprocess%20and%20train/) directory. It provides comprehensive instructions on preparing the dataset, training the ensemble model, and evaluating its performance with detailed accuracy metrics.
 
 
 ## Sample Classifications
