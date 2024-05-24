@@ -100,7 +100,7 @@ Initially, a lightweight model based on MobileNetV2, known for its efficiency on
 Given the limitations observed with the preliminary model, a robust ensemble approach was adopted. This method leverages the strengths of three distinct CNN architectures: ResNet50, InceptionV3, and MobileNetV2. By freezing the initial layers and fine-tuning the deeper ones, the ensemble model captures diverse facial features more effectively.
 
 ### **Training Dynamics**:
-- **Model Configuration**: Layers from each base model are frozen to preserve learned features, with only the last layers fine-tuned.
+- **Model Configuration**: Layers from each base model are frozen to preserve learned features, with only the last ten layers of each to be fine-tuned.
 - **Compilation**: The ensemble model uses an Adam optimizer with a learning rate of 0.0001 and categorical crossentropy loss, suitable for multi-class problems.
 - **Training Process**: Incorporates early stopping and model checkpointing to enhance performance and prevent overfitting, training over several epochs with batch size set to 32.
 
