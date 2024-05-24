@@ -78,6 +78,12 @@ The frontend is designed with simplicity in mind, using basic HTML for structure
 
 By running the application on your local machine, you can interact with the model directly through the web interface hosted at `http://localhost:5000`.
 
+## Application Performance
+
+After launching the application, you can upload images for classification. Here’s a demonstration of the application's performance:
+
+![App Performance](static/path_to_application_gif.gif)
+
 ## Conclusion
 
 This project showcases the integration of machine learning models into a web application, demonstrating practical deployment and interaction with a user interface. For further improvements, consider expanding the dataset, refining the model with more advanced techniques, or optimizing the web application for production environments.
