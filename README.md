@@ -70,7 +70,7 @@ This application utilizes Flask, a lightweight and versatile web framework in Py
 
 ### Backend
 
-The Flask backend is configured to handle image uploads, where uploaded images are processed and classified using the pre-trained TensorFlow model. The predictions are then sent back to the frontend.
+The **Flask backend** is configured to handle image uploads, where uploaded images are processed and classified using the pre-trained TensorFlow model. The predictions are then sent back to the frontend.
 
 ### Frontend
 
