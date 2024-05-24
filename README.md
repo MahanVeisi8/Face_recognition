@@ -64,11 +64,6 @@ The system can recognize the following celebrities:
   </table>
 Each class has been accurately predicted by the ensemble model, with an overview of each class provided in the application.
 
-
-![Sample Classification](static/path_to_sample_image.png)
-
-Each class has been accurately predicted by the ensemble model, with an overview of each class provided in the application.
-
 ## Application Performance
 
 After launching the application, you can upload images for classification. Here’s a demonstration of the application's performance:
