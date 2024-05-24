@@ -28,36 +28,23 @@ The notebook includes detailed steps for data handling, preprocessing, model tra
 - Building and training an ensemble model using architectures like MobileNetV2 and InceptionV3.
 - Evaluating model performance and analyzing misclassifications.
 
-## Setup Instructions
+## Setup
 
-To run this notebook, you need access to a Python environment with TensorFlow and Keras installed. You can follow these steps to get started:
+**Running the Notebook in Google Colab**
+- The notebook is designed for easy execution in Google Colab, requiring no additional setup other than a Google account and internet access.😊
+  
+The code is designed to run in a Python environment with essential machine learning and simulation libraries. You can execute the notebook directly in Google Colab using the badge link provided, which includes a pre-configured environment with all necessary dependencies.
 
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
-2. Install required libraries:
-   ```bash
-   pip install tensorflow==2.4 keras numpy opencv-python matplotlib scikit-learn
-   ```
-3. If using Google Colab, make sure to mount your Google Drive to access datasets:
-   ```python
-   from google.colab import drive
-   drive.mount('/content/drive')
-   ```
 
-## Notebook Details
-
-### Data Preprocessing
+## Data Preprocessing
 
 The preprocessing steps include resizing images, converting images to the appropriate color scale, and normalizing the pixel values. The notebook uses multi-threading to efficiently load and process large sets of image data from disk.
 
-### Model Training
+## Model Training
 
 The project utilizes a combination of different CNN architectures, leveraging pretrained models like MobileNetV2 for feature extraction and custom layers for classification. The training process is detailed with strategies for handling overfitting, such as early stopping and dropout layers.
 
-### Evaluation and Analysis
+## Evaluation and Analysis
 
 After training, the model is evaluated on a held-out test set. The performance metrics such as accuracy and loss are plotted over epochs. The notebook also includes a section for visualizing incorrect predictions to analyze the model's weaknesses and potential biases.
 
