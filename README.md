@@ -82,7 +82,7 @@ By running the application on your local machine, you can interact with the mode
 
 After launching the application, you can upload images for classification. Here’s a demonstration of the application's performance:
 
-![App Performance](static/path_to_application_gif.gif)
+![App Performance](asset/app_performance.gif)
 
 ## Conclusion
 
