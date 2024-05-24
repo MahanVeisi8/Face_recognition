@@ -1,8 +1,3 @@
-Based on your provided code, I'll help you draft a README that includes an overview of the project, detailed descriptions of the preprocessing and model training steps, and instructions on how to run the notebook. Here's how you could structure and write your README:
-
----
-
-```md
 # Celebrity Face Recognition Using TensorFlow and Keras
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1egf7l4c_riqb2pxKrEM3nz9kksP3ljyB?usp=sharing)
@@ -77,14 +72,4 @@ The notebook provides graphs and metrics that demonstrate the model's performanc
 
 Contributions to this project are welcome! Please feel free to fork the repository, make your changes, and submit a pull request. You can also open issues for bugs you've noticed or features you think would make a valuable addition to the project.
 
-```
 
----
-
-### Key Points:
-1. **Clarity and Detail**: The README should give a clear overview of what the notebook achieves and how each part of the project contributes to the final goal.
-2. **Setup Instructions**: Detailed setup instructions ensure that anyone can clone the repository and get the notebook running without any issues.
-3. **Documentation**: The notebook itself should be well-documented with comments explaining why certain steps are taken (e.g., why certain preprocessing steps are needed).
-4. **Results and Visualization**: Include explanations of the results and what they mean for the project. Visual aids can help illustrate the performance and issues of the model.
-
-This template should give you a solid foundation to build on, adapting and expanding as necessary to fit the specifics of your project and any additional content or sections you might want to include.
