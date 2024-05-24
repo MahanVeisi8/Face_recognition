@@ -36,44 +36,55 @@ The notebook includes detailed steps for data handling, preprocessing, model tra
 The code is designed to run in a Python environment with essential machine learning and simulation libraries. You can execute the notebook directly in Google Colab using the badge link provided, which includes a pre-configured environment with all necessary dependencies.
 
 
-
-# Data Preprocessing
-
-Data preprocessing is a crucial first step in any machine learning workflow, ensuring that the data fed into the model is clean, appropriately formatted, and enhanced to improve model performance. This project involves several preprocessing steps, from initial data loading and visualization to more complex manipulations like augmentation and normalization.
-
-
 ## Data Loading and Image Resizing
 
-This step involves loading the images from structured directories named after each celebrity, resizing them to uniform dimensions (224x224 pixels), and labeling them based on their directory names to facilitate their use in training a convolutional neural network.
+Images stored in directories named after each celebrity are loaded and resized to a uniform dimension of 224x224 pixels—ideal for CNN input. Each image is labeled based on its parent directory, aligning with the respective celebrity's name. This automated labeling facilitates straightforward training and validation:
+
+```python
+# Function load_and_resize_image() is used here
+```
+
+**Image Placeholder:**
+- ![Data Loading and Resizing](asset/first_data.jpg)
 
 ## Visualizing the Data
 
-To ensure that images are correctly loaded and to understand the dataset's composition, a sample of images is displayed. This helps verify the integrity of the image loading and resizing process.
+To verify that images are correctly loaded and to understand the dataset's composition, we display a sample of the images. This visualization step checks the integrity of the image loading and resizing process and offers a quick glimpse into the data's variety and quality:
 
-![Data Loading and Resizing](asset/first_data.jpg)
+**Image Placeholder:**
+- ![Sample Images Visualization](asset/first_data.jpg)
 
 ## Data Augmentation
 
-To enhance model robustness and prevent overfitting, the training images are augmented using a variety of transformations, such as rotations, shifts, shearing, flipping, and brightness adjustments. These transformations simulate different lighting conditions, orientations, and partial occlusions the model might encounter in practical scenarios.
+To enhance model robustness and mitigate overfitting, training images undergo augmentation. Transformations such as rotations, shifts, shearing, flipping, and brightness adjustments are applied. These augmentations help the model generalize better by simulating various real-world conditions:
 
-![Data Augmentation](asset/augmentation.jpg)
+```python
+# Using ImageDataGenerator for applying transformations
+```
+
+**Image Placeholder:**
+- ![Data Augmentation](asset/augmentation.jpg)
 
 ## Splitting the Data
 
-The images are split into training, validation, and test sets. This is essential for training the model effectively and evaluating its performance on unseen data. Stratified sampling is used to maintain the distribution of classes across these sets.
+To ensure effective training and unbiased evaluation, the dataset is divided into training, validation, and test sets using stratified sampling. This method helps maintain an equal distribution of classes across each set, crucial for training unbiased and generalized models:
+
+```python
+# Code snippet for train_test_split showing stratified sampling
+```
+
+The distribution of classes in each dataset part is visualized to confirm uniformity and appropriate representation:
 
 <table>
   <tr>
-    <td>Train Distribution<br><img src="asset/data_dist1.png" alt="Epoch 10 Performance" width="240px"></td>
-    <td>>Validation Distribution<br><img src="asset/data_dist2.png" alt="Epoch 500 Performance" width="240px"></td>
-    <td>Test Distribution<br><img src="asset/data_dist3.png" alt="Epoch 1000 Performance" width="240px"></td>
+    <td>Train Distribution<br><img src="asset/data_dist1.png" alt="Training Distribution" width="240px"></td>
+    <td>Validation Distribution<br><img src="asset/data_dist2.png" alt="Validation Distribution" width="240px"></td>
+    <td>Test Distribution<br><img src="asset/data_dist3.png" alt="Test Distribution" width="240px"></td>
   </tr>
 </table>
 
 **Image Placeholder:**
-- ![Data Split and Distribution](path/to/data_split_distribution.png)
-
-
+- ![Data Split and Distribution](asset/data_split_distribution.png)
 
 
 ## Model Training
