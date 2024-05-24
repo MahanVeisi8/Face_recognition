@@ -38,7 +38,7 @@ The system can recognize the following celebrities:
 
 <table>
   <tr>
-    <td><img src="asset/celeb_sample_img/Ali_Daei/1.jpg" alt="Ali Daei" width="100"><br>0: Ali Daei</td>
+    <td><img src="asset/celeb_sample_img/Ali_Daei/1.jpg" alt="Ali Daei" width="150"><br>0: Ali Daei</td>
     <td><img src="asset/celeb_sample_img/Alireza_Beiranvand/1.jpg" alt="Alireza Beiranvand" width="100"><br>1: Alireza Beiranvand</td>
     <td><img src="asset/celeb_sample_img/Bahram_Radan/1.jpg" alt="Bahram Radan" width="100"><br>2: Bahram Radan</td>
     <td><img src="asset/celeb_sample_img/Ebi/1.jpg" alt="Ebi" width="100"><br>3: Ebi</td>
@@ -48,8 +48,8 @@ The system can recognize the following celebrities:
   <tr>
     <td><img src="asset/celeb_sample_img/Homayoon_Shajarian/1.jpg" alt="Homayoon Shajarian" width="100"><br>6: Homayoon Shajarian</td>
     <td><img src="asset/celeb_sample_img/Javad_Razavian/1.jpg" alt="Javad Razavian" width="100"><br>7: Javad Razavian</td>
-    <td><img src="asset/celeb_sample_img/Mehran_Ghafourian/1.jpg" alt="Mehran Ghafourian" width="100"><br>8: Mehran Ghafourian</td>
-    <td><img src="asset/celeb_sample_img/Mehran_Modiri/1.jpg" alt="Mehran Modiri" width="100"><br>9: Mehran Modiri</td>
+    <td><img src="asset/celeb_sample_img/Mehran_Ghafoorian/1.jpg" alt="Mehran Ghafourian" width="100"><br>8: Mehran Ghafourian</td>
+    <td><img src="asset/celeb_sample_img/Mehran_Modiri/1.jpeg" alt="Mehran Modiri" width="100"><br>9: Mehran Modiri</td>
     <td><img src="asset/celeb_sample_img/Mohamad_Esfehani/1.jpg" alt="Mohamad Esfehani" width="100"><br>10: Mohamad Esfehani</td>
     <td><img src="asset/celeb_sample_img/Reza_Attaran/1.jpg" alt="Reza Attaran" width="100"><br>11: Reza Attaran</td>
   </tr>
