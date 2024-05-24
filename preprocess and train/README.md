@@ -1,4 +1,4 @@
-# Celebrity Face Recognition Using TensorFlow and Keras
+# Celebrity Face Recognition Using Ensemble Model
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1egf7l4c_riqb2pxKrEM3nz9kksP3ljyB?usp=sharing)
 ![Python](https://img.shields.io/badge/Python-3.8-blue)
@@ -6,14 +6,31 @@
 ![Keras](https://img.shields.io/badge/Keras-2.4.3-red)
 ![Status](https://img.shields.io/badge/status-active-green)
 
-This repository hosts a Jupyter Notebook that documents the end-to-end process of building a celebrity face recognition model. The project utilizes TensorFlow and Keras for building an ensemble of convolutional neural networks (CNNs) to classify images into distinct **iranian** celebrity categories based on their facial features.
+This repository hosts a Jupyter Notebook that documents the end-to-end process of building a celebrity face recognition model. The project utilizes TensorFlow and Keras to build an ensemble of convolutional neural networks (CNNs) for classifying images into distinct Iranian celebrity categories based on their facial features.
 
+## Table of Contents
+
+- [Setup](#setup)
+- [Preprocessing](#preprocessing)
+  - [Data Loading and Image Resizing](#data-loading-and-image-resizing)
+  - [Visualizing the Data](#visualizing-the-data)
+  - [Data Augmentation](#data-augmentation)
+  - [Splitting the Data](#splitting-the-data)
+  - [Data Normalization and Preparation](#data-normalization-and-preparation)
+- [Model Training and Evaluation](#model-training-and-evaluation)
+  - [Preliminary Model: MobileNetV2](#preliminary-model-mobilenetv2)
+  - [Advanced Ensemble Model](#advanced-ensemble-model)
+- [Testing on Real-World Data](#testing-on-real-world-data)
+- [Conclusion](#conclusion)
+- [Evaluation and Analysis](#evaluation-and-analysis)
+- [Results](#results)
+- [Contributing](#contributing)
 
 ## Setup
 
 **Running the Notebook in Google Colab**
 - The notebook is designed for easy execution in Google Colab, requiring no additional setup other than a Google account and internet access.😊
-  
+
 The code is designed to run in a Python environment with essential machine learning and simulation libraries. You can execute the notebook directly in Google Colab using the badge link provided, which includes a pre-configured environment with all necessary dependencies.
 
 
@@ -102,24 +119,11 @@ The below graphs provide insights into the training and validation phases, under
 ### **Final Model Accuracies**: 
 The ensemble model demonstrated exceptional performance with an accuracy of **100.00%** on the training set, highlighting perfect learning on the training data. Validation accuracy reached **96.47%**, indicating strong generalization to new data. Finally, the model achieved **90.70%** accuracy on the test set, confirming its robustness and effectiveness in handling unseen data. Despite these impressive results, there's potential for further improvement with enhanced computational resources such as increased GPU and RAM, which would allow for more extensive data handling and more complex model training.
 
-## Testing on Real-World Data
-The ensemble model's real-world efficacy was further confirmed through tests on new images, not part of the training or validation datasets. This step was crucial to ascertain the model's practical applicability, ensuring it performs well under varied and uncontrolled conditions typical of real-world usage.
+## Ready for Application
+Integration The ensemble model has demonstrated its capability to effectively recognize celebrity faces with high accuracy, confirming its readiness for integration into real-world applications. This ensures the model performs robustly, not just in controlled test environments, but also in practical, everyday use scenarios.
 
 ## Conclusion
-The ensemble approach, with its strategic layer freezing and fine-tuning, provided a significant boost in handling the complexities of facial recognition, even with a constrained training environment. Future enhancements could include expanding the dataset and utilizing more extensive computational resources to fully harness the potential of deep learning in facial recognition technology.
-## Evaluation and Analysis
 
-After training, the model is evaluated on a held-out test set. The performance metrics such as accuracy and loss are plotted over epochs. The notebook also includes a section for visualizing incorrect predictions to analyze the model's weaknesses and potential biases.
-
-## Results
-
-The notebook provides graphs and metrics that demonstrate the model's performance. For instance:
-- Training and validation accuracy/loss graphs.
-- Test set accuracy.
-- Examples of correct and incorrect predictions.
-
-## Contributing
-
-Contributions to this project are welcome! Please feel free to fork the repository, make your changes, and submit a pull request. You can also open issues for bugs you've noticed or features you think would make a valuable addition to the project.
+This project successfully demonstrates the use of TensorFlow and Keras to build an ensemble model for celebrity face recognition. Through rigorous preprocessing and leveraging advanced CNN architectures, the model achieved high accuracy and robust performance on both validation and test sets. Despite computational constraints, the ensemble approach significantly improved the model's ability to generalize, highlighting its potential for real-world applications. Future improvements could include expanding the dataset and utilizing enhanced computational resources to further refine and extend the model's capabilities.
 
 
