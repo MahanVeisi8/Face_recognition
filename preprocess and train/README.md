@@ -72,10 +72,38 @@ The distribution of classes in each dataset part is visualized to confirm unifor
 
 After partitioning the data, each image's pixel values are normalized to a range of 0 to 1 to facilitate efficient training. This normalization process aids in achieving faster convergence during model training. Furthermore, image labels are converted into one-hot encoded vectors to suit the model's categorical classification needs. These steps ensure the data is in the optimal format for feeding into our neural network, setting a strong foundation for robust model performance.
 
-## Model Training
+## Model Training and Evaluation
 
-The project utilizes a combination of different CNN architectures, leveraging pretrained models like MobileNetV2 for feature extraction and custom layers for classification. The training process is detailed with strategies for handling overfitting, such as early stopping and dropout layers.
+After the rigorous preprocessing phase, the focus shifts to training and evaluating machine learning models. Two methods are employed in this project: a preliminary model using MobileNetV2 and a more sophisticated ensemble model that combines features from three different architectures.
 
+### Preliminary Model: MobileNetV2
+Initially, a lightweight model based on MobileNetV2, known for its efficiency on mobile devices, was implemented. This model was augmented with custom layers to specifically handle our face recognition task. However, it struggled with the dataset's complexity, achieving modest validation and test accuracies.
+
+### Advanced Ensemble Model
+Given the limitations observed with the preliminary model, a robust ensemble approach was adopted. This method leverages the strengths of three distinct CNN architectures: ResNet50, InceptionV3, and MobileNetV2. By freezing the initial layers and fine-tuning the deeper ones, the ensemble model captures diverse facial features more effectively.
+
+**Training Dynamics**:
+- **Model Configuration**: Layers from each base model are frozen to preserve learned features, with only the last layers fine-tuned.
+- **Compilation**: The ensemble model uses an Adam optimizer with a learning rate of 0.0001 and categorical crossentropy loss, suitable for multi-class problems.
+- **Training Process**: Incorporates early stopping and model checkpointing to enhance performance and prevent overfitting, training over several epochs with batch size set to 32.
+
+**Evaluation**:
+- **Performance Metrics**: The model's training journey is depicted through accuracy and loss plots, illustrating the learning curve and the balance between learning and overfitting.
+- **Accuracy Achievements**: Although halted prematurely due to GPU constraints, the model showed promising results with validation accuracy peaking significantly higher than the initial simple model.
+  
+**Results Visualization**:
+The below graphs provide insights into the training and validation phases, underlining the challenges and achievements of the ensemble model:
+
+![Training and Validation Accuracy](asset/training_validation_accuracy.png)
+![Training and Validation Loss](asset/training_validation_loss.png)
+
+These visuals reflect the model's robustness and its capability to generalize, despite the limited training epochs due to resource constraints. The ensemble model's advanced architecture and strategic training regimen culminated in superior performance on unseen data, achieving notable accuracies in both validation and test sets. 
+
+## Testing on Real-World Data
+The ensemble model's real-world efficacy was further confirmed through tests on new images, not part of the training or validation datasets. This step was crucial to ascertain the model's practical applicability, ensuring it performs well under varied and uncontrolled conditions typical of real-world usage.
+
+## Conclusion
+The ensemble approach, with its strategic layer freezing and fine-tuning, provided a significant boost in handling the complexities of facial recognition, even with a constrained training environment. Future enhancements could include expanding the dataset and utilizing more extensive computational resources to fully harness the potential of deep learning in facial recognition technology.
 ## Evaluation and Analysis
 
 After training, the model is evaluated on a held-out test set. The performance metrics such as accuracy and loss are plotted over epochs. The notebook also includes a section for visualizing incorrect predictions to analyze the model's weaknesses and potential biases.
