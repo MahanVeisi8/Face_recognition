@@ -36,11 +36,10 @@ The code is designed to run in a Python environment with essential machine learn
 
 ## Preprocessing
 
-### **Data Collection**
 
-To ensure the highest quality and accuracy in fashion image classification, we utilized the full **Fashion Product Images Dataset** from Kaggle, which includes over 44,000 images. Unlike the smaller, compressed version, this full dataset (25 GB) offers high-resolution images that are essential for accurately detecting attributes such as colors and fine details in fashion items.
+### Data Loading and Image Resizing
 
-Given the dataset's large size, processing was performed on Google Colab Pro with T4 GPU support, ensuring sufficient disk space and processing power for efficient handling and accelerated model training.
+Images stored in directories named after each celebrity are loaded and resized to a uniform dimension of 224x224 pixels—ideal for CNN input. Each image is labeled based on its parent directory, aligning with the respective celebrity's name. This automated labeling facilitates straightforward training and validation:
 
 
 ### Visualizing the Data
@@ -128,5 +127,3 @@ Integration The ensemble model has demonstrated its capability to effectively re
 ## Conclusion
 
 This project successfully demonstrates the use of TensorFlow and Keras to build an ensemble model for celebrity face recognition. Through rigorous preprocessing and leveraging advanced CNN architectures, the model achieved high accuracy and robust performance on both validation and test sets. Despite computational constraints, the ensemble approach significantly improved the model's ability to generalize, highlighting its potential for real-world applications. Future improvements could include expanding the dataset and utilizing enhanced computational resources to further refine and extend the model's capabilities.
-
-
